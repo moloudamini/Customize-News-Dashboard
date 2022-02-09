@@ -1,0 +1,16 @@
+# Codeception Test Suite Configuration
+#
+# Suite for unit or integration tests.
+
+actor: UnitTester
+modules:
+    enabled:
+        - Asserts
+        - \Helper\Unit
+        - DrupalBootstrap:
+            server:
+              SERVER_PORT: null
+              REQUEST_URI: '/'
+              REMOTE_ADDR: '127.0.0.1'
+              HTTP_HOST: 'site.multi'
+    step_decorators: ~

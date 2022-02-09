@@ -1,0 +1,23 @@
+paths:
+  tests: tests
+  output: tests/_output
+  data: tests/_data
+  support: tests/_support
+  envs: tests/_envs
+actor_suffix: Tester
+extensions:
+  enabled:
+    - Codeception\Extension\RunFailed
+coverage:
+  enabled: true
+  remote: false
+  include:
+    - web/profiles/uw_news_profile/modules/features/*
+  exclude:
+    - web/profiles/uw_news_profile/modules/features/*.yml
+    - web/profiles/uw_news_profile/modules/features/*/*/tests/*
+    - web/profiles/uw_news_profile/modules/features/**/css/*
+    - web/profiles/uw_news_profile/modules/features/**/layouts/*
+    - web/profiles/uw_news_profile/modules/features/**/templates/*
+    - web/profiles/uw_news_profile/modules/features/**/composer.json
+    - web/profiles/uw_news_profile/modules/features/uw_news_dev/*
